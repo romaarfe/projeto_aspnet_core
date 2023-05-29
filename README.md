@@ -109,10 +109,10 @@
 *	WebRPGCreation.Migrations
 
 ### Classes e métodos
-*	WebRPGCreation
-  *	Program
-
-*	Data
+* WebRPGCreation
+  * Program
+  
+* Data
   *	ApplicationDbContext
 
 *	Models
