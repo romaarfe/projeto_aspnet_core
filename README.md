@@ -174,7 +174,7 @@
     * Error( )
 
 ### Outras informações
-*	Material Extra (wwwroot):
+* Material Extra (wwwroot):
   *	Sketchy Theme (Bootstrap)
   *	Image
 
