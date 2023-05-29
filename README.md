@@ -29,4 +29,23 @@
 
 * Limitar a quantidade de Equipamentos associados aos personagens com base no valor final do atributo poder. 
 
-* Qualquer um não logado (Jogador) pode visualizar Home, Personagens, Criar Novos Personagens, e ver Detalhes dos Personagens.  
+* Qualquer um não logado (Jogador) pode visualizar Home, Personagens, Criar Novos Personagens, e ver Detalhes dos Personagens. 
+
+## Ferramentas e versões
+
+*	Início do planeamento em 2023-04-30
+*	Reformulação do Diagrama de Entidades em 2023-05-05
+  * Exclusão do Artefato, Bugiganga e PacoteInicial
+  * Os três acima foram diferenciados em Tipos dentro do Equipamento
+  * Retirada de alguns preenchimentos obrigatórios
+  *	Reestruturação dos Modelos
+*	Modificações em 2023-05-06:
+  *	Alterado alguns tipos para poder incluir mais informações pertinentes
+  *	Alteração considerável no Equipamento
+  *	Primeira tentativa, de muitas, frustrada de incluir sistema de Login no projeto já iniciado
+*	Modificações em 2023-05-13:
+  *	Recriação do projeto “do zero” para inclusão do sistema de Login automático pelo modo Identity
+  *	Remodelações das Views e nos Controllers
+
+
+
