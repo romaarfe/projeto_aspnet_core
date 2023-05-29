@@ -1,6 +1,9 @@
-# Web RPG Creation
+# PROJETO DE 25 HORAS EM C#
+## PARA CURSO DE PROGRAMADOR DE INFORMÁTICA - IEFP BRAGA
 
-## Descrição do problema 
+### Web RPG Creation
+
+### Descrição do problema 
 
 * Registo de grupos de e gestão dos personagens, com todos seus equipamentos e especialidades. Para uso limitado dos Jogadores e para total controle do Game Master em suas partidas de Roleplaying Game. 
 
@@ -12,8 +15,7 @@
 
 * Há conexão com a Base de dados, onde ficam registadas estas informações. 
 
-
-## Lista de tarefas a serem implementadas 
+### Lista de tarefas a serem implementadas 
 
 * Inicialmente criar o projeto com Identity e configurá-lo para aceitar Login por parte do Game Master e limitar acesso às funções por parte dos Jogadores. 
 
@@ -31,15 +33,15 @@
 
 * Qualquer um não logado (Jogador) pode visualizar Home, Personagens, Criar Novos Personagens, e ver Detalhes dos Personagens. 
 
-## Ferramentas e versões
+### Ferramentas e versões
 
 *	Início do planeamento em 2023-04-30
 
-*	Reformulação do Diagrama de Entidades em 2023-05-05
-   * Exclusão do Artefato, Bugiganga e PacoteInicial
-   *	Os três acima foram diferenciados em Tipos dentro do Equipamento
-   *	Retirada de alguns preenchimentos obrigatórios
-   *	Reestruturação dos Modelos
+*	Reformulação do Diagrama de Entidades em 2023-05-05:
+  *	Exclusão do Artefato, Bugiganga e PacoteInicial
+  *	Os três acima foram diferenciados em Tipos dentro do Equipamento
+  *	Retirada de alguns preenchimentos obrigatórios
+  *	Reestruturação dos Modelos
  
 *	Modificações em 2023-05-06:
    * Alterado alguns tipos para poder incluir mais informações pertinentes
