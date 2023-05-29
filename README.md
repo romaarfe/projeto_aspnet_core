@@ -122,12 +122,12 @@
   *	Personagem
   *	PoderProfano
   *	ErrorViewModel
-
-*	Controllers
+  
+* Controllers
   *	EquipamentoController
     *	Index( )
-o	Details( )
-o	Create( )
+    * Details( )
+    * Create( )
 o	Edit( )
 o	Delete( )
 o	DeleteConfirmed( )
