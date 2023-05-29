@@ -64,69 +64,68 @@
 
 * Personagem:
   * Id - INT, NN, PK, AI
-o	Nome - NVARCHAR(MAX)
-o	Descricao - NVARCHAR(MAX)
-o	Nivel - NVARCHAR(MAX)
-o	XP - NVARCHAR(MAX)
-o	PoderAtual - NVARCHAR(MAX)
-o	PoderMaximo - NVARCHAR(MAX)
-o	AgirAtual - NVARCHAR(MAX)
-o	AgirMaximo - NVARCHAR(MAX)
-o	MenteAtual - NVARCHAR(MAX)
-o	MenteMaximo - NVARCHAR(MAX)
-o	HpAtual - NVARCHAR(MAX)
-o	HpMaximo - NVARCHAR(MAX)
-o	GrupoId - INT, NN, FK
-o	Moeda - NVARCHAR(MAX)
+  * Nome - NVARCHAR(MAX)
+  * Descricao - NVARCHAR(MAX)
+  * Nivel - NVARCHAR(MAX)
+  * XP - NVARCHAR(MAX)
+  * PoderAtual - NVARCHAR(MAX)
+  * PoderMaximo - NVARCHAR(MAX)
+  * AgirAtual - NVARCHAR(MAX)
+  * AgirMaximo - NVARCHAR(MAX)
+  * MenteAtual - NVARCHAR(MAX)
+  * MenteMaximo - NVARCHAR(MAX)
+  * HpAtual - NVARCHAR(MAX)
+  * HpMaximo - NVARCHAR(MAX)
+  * GrupoId - INT, NN, FK
+  * Moeda - NVARCHAR(MAX)
 
-•	Especialidade:
-o	Id - INT, NN, PK, AI
-o	Nome - NVARCHAR(MAX)
-o	Descricao - NVARCHAR(MAX)
-o	PersonagemId - INT, NN, FK
+* Especialidade:
+  * Id - INT, NN, PK, AI
+  * Nome - NVARCHAR(MAX)
+  * Descricao - NVARCHAR(MAX)
+  * PersonagemId - INT, NN, FK
 
-•	Equipamento:
-o	Id - INT, NN, PK, AI
-o	Nome - NVARCHAR(MAX)
-o	Quantidade - NVARCHAR(MAX)
-o	Valor - NVARCHAR(MAX)
-o	Tipo - NVARCHAR(MAX)
-o	Ataque - NVARCHAR(MAX)
-o	Protecao - NVARCHAR(MAX)
-o	PoderProfanoId - INT, NN, FK
-o	PersonagemId - INT, NN, FK
+* Equipamento:
+  * Id - INT, NN, PK, AI
+  * Nome - NVARCHAR(MAX)
+  * Quantidade - NVARCHAR(MAX)
+  * Valor - NVARCHAR(MAX)
+  * Tipo - NVARCHAR(MAX)
+  * Ataque - NVARCHAR(MAX)
+  * Protecao - NVARCHAR(MAX)
+  * PoderProfanoId - INT, NN, FK
+  * PersonagemId - INT, NN, FK
 
-
-•	PoderProfano:
-o	Id - INT, NN, PK, AI
-o	Nome - NVARCHAR(MAX)
-o	Descricao - NVARCHAR(MAX)
+* PoderProfano:
+  * Id - INT, NN, PK, AI
+  * Nome - NVARCHAR(MAX)
+  * Descricao - NVARCHAR(MAX)
 
 
 ### Namespaces
-•	WebRPGCreation.Controllers
-•	WebRPGCreation.Data
-•	WebRPGCreation.Models
-•	WebRPGCreation.Migrations
+* WebRPGCreation.Controllers
+*	WebRPGCreation.Data
+*	WebRPGCreation.Models
+*	WebRPGCreation.Migrations
 
 ### Classes e métodos
-	WebRPGCreation
-•	Program
+*	WebRPGCreation
+  *	Program
 
-	Data
-•	ApplicationDbContext
+*	Data
+  *	ApplicationDbContext
 
-	Models
-•	Equipamento
-•	Especialidade
-•	Grupo
-•	Personagem
-•	PoderProfano
-•	ErrorViewModel
+*	Models
+  *	Equipamento
+  *	Especialidade
+  *	Grupo
+  *	Personagem
+  *	PoderProfano
+  *	ErrorViewModel
 
-	Controllers
-•	EquipamentoController
-o	Index( )
+*	Controllers
+  *	EquipamentoController
+    *	Index( )
 o	Details( )
 o	Create( )
 o	Edit( )
