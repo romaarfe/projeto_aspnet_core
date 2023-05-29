@@ -35,7 +35,7 @@
 
 *	Início do planeamento em 2023-04-30
 *	Reformulação do Diagrama de Entidades em 2023-05-05
-  * Exclusão do Artefato, Bugiganga e PacoteInicial
+  ** Exclusão do Artefato, Bugiganga e PacoteInicial
   * Os três acima foram diferenciados em Tipos dentro do Equipamento
   * Retirada de alguns preenchimentos obrigatórios
   *	Reestruturação dos Modelos
