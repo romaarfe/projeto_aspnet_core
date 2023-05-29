@@ -55,8 +55,8 @@
 ### Análise de dados
 
 ### Lista de tabelas, campos e tipos
-•	Grupo:
-o	Id - INT, NN, PK, AI
+* Grupo:
+  * Id - INT, NN, PK, AI
 o	Nome - NVARCHAR(MAX)
 o	Descricao - NVARCHAR(MAX)
 o	DataFim - DATETIME2(7)
