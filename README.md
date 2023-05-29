@@ -48,9 +48,9 @@
   * Alteração considerável no Equipamento
   * Primeira tentativa, de muitas, frustrada de incluir sistema de Login no projeto já iniciado
 
-*	Modificações em 2023-05-13:
-  *	Recriação do projeto “do zero” para inclusão do sistema de Login automático pelo modo Identity
-  *	Remodelações das Views e nos Controllers
+* Modificações em 2023-05-13:
+  * Recriação do projeto “do zero” para inclusão do sistema de Login automático pelo modo Identity
+  * Remodelações das Views e nos Controllers
 
 
 
