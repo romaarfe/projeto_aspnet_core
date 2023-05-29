@@ -1,4 +1,4 @@
-# PROJETO DE 25 HORAS EM C#
+# PROJETO DE 50 HORAS EM C#
 ## PARA CURSO DE PROGRAMADOR DE INFORMÁTICA - IEFP BRAGA
 
 ### Web RPG Creation
@@ -38,10 +38,10 @@
 *	Início do planeamento em 2023-04-30
 
 *	Reformulação do Diagrama de Entidades em 2023-05-05:
-  *	Exclusão do Artefato, Bugiganga e PacoteInicial
-  *	Os três acima foram diferenciados em Tipos dentro do Equipamento
-  *	Retirada de alguns preenchimentos obrigatórios
-  *	Reestruturação dos Modelos
+   *	Exclusão do Artefato, Bugiganga e PacoteInicial
+   *	Os três acima foram diferenciados em Tipos dentro do Equipamento
+   *	Retirada de alguns preenchimentos obrigatórios
+   *	Reestruturação dos Modelos
  
 *	Modificações em 2023-05-06:
    * Alterado alguns tipos para poder incluir mais informações pertinentes
