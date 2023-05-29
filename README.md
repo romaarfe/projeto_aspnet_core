@@ -128,56 +128,54 @@
     *	Index( )
     * Details( )
     * Create( )
-o	Edit( )
-o	Delete( )
-o	DeleteConfirmed( )
-o	EquipamentoExists( )
+    * Edit( )
+    * Delete( )
+    * DeleteConfirmed( )
+    * EquipamentoExists( )
+    
+  * EspecialidadeController
+    * Index( )
+    * Details( )
+    * Create( )
+    * Edit( )
+    * Delete( )
+    * DeleteConfirmed( )
+    * EspecialidadeExists( )
 
-•	EspecialidadeController
-o	Index( )
-o	Details( )
-o	Create( )
-o	Edit( )
-o	Delete( )
-o	DeleteConfirmed( )
-o	EspecialidadeExists( )
+  * GrupoController
+    * Index( )
+    * Details( )
+    * Create( )
+    * Edit( )
+    * Delete( )
+    * DeleteConfirmed( )
+    * GrupoExists( )
 
-•	GrupoController
-o	Index( )
-o	Details( )
-o	Create( )
-o	Edit( )
-o	Delete( )
-o	DeleteConfirmed( )
-o	GrupoExists( )
-
-
-•	PersonagemController
-o	Index( )
-o	Details( )
-o	Create( )
-o	Edit( )
-o	Delete( )
-o	DeleteConfirmed( )
-o	PersonagemExists( )
-
-•	PoderProfanoController
-o	Index( )
-o	Details( )
-o	Create( )
-o	Edit( )
-o	Delete( )
-o	DeleteConfirmed( )
-o	PoderProfanoeExists( )
-
-•	HomeController
-o	Index( )
-o	Error( )
-
+  * PersonagemController
+    * Index( )
+    * Details( )
+    * Create( )
+    * Edit( )
+    * Delete( )
+    * DeleteConfirmed( )
+    * PersonagemExists( )
+    
+  * PoderProfanoController
+    * Index( )
+    * Details( )
+    * Create( )
+    * Edit( )
+    * Delete( )
+    * DeleteConfirmed( )
+    * PoderProfanoeExists( )
+    
+  * HomeController
+    * Index( )
+    * Error( )
 
 ### Outras informações
-•	Material Extra (wwwroot):
-o	Sketchy Theme (Bootstrap)
-o	Image
+*	Material Extra (wwwroot):
+  *	Sketchy Theme (Bootstrap)
+  *	Image
 
 
