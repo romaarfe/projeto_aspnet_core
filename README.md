@@ -52,5 +52,5 @@
   * Recriação do projeto “do zero” para inclusão do sistema de Login automático pelo modo Identity
   * Remodelações das Views e nos Controllers
 
-
+### Análise de dados
 
