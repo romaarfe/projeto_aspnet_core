@@ -12,6 +12,7 @@
 
 * Há conexão com a Base de dados, onde ficam registadas estas informações. 
 
+
 ## Lista de tarefas a serem implementadas 
 
 * Inicialmente criar o projeto com Identity e configurá-lo para aceitar Login por parte do Game Master e limitar acesso às funções por parte dos Jogadores. 
