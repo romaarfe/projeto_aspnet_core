@@ -54,3 +54,131 @@
 
 ### Análise de dados
 
+### Lista de tabelas, campos e tipos
+•	Grupo:
+o	Id - INT, NN, PK, AI
+o	Nome - NVARCHAR(MAX)
+o	Descricao - NVARCHAR(MAX)
+o	DataFim - DATETIME2(7)
+o	DataInicio - DATETIME2(7)
+
+•	Personagem:
+o	Id - INT, NN, PK, AI
+o	Nome - NVARCHAR(MAX)
+o	Descricao - NVARCHAR(MAX)
+o	Nivel - NVARCHAR(MAX)
+o	XP - NVARCHAR(MAX)
+o	PoderAtual - NVARCHAR(MAX)
+o	PoderMaximo - NVARCHAR(MAX)
+o	AgirAtual - NVARCHAR(MAX)
+o	AgirMaximo - NVARCHAR(MAX)
+o	MenteAtual - NVARCHAR(MAX)
+o	MenteMaximo - NVARCHAR(MAX)
+o	HpAtual - NVARCHAR(MAX)
+o	HpMaximo - NVARCHAR(MAX)
+o	GrupoId - INT, NN, FK
+o	Moeda - NVARCHAR(MAX)
+
+•	Especialidade:
+o	Id - INT, NN, PK, AI
+o	Nome - NVARCHAR(MAX)
+o	Descricao - NVARCHAR(MAX)
+o	PersonagemId - INT, NN, FK
+
+•	Equipamento:
+o	Id - INT, NN, PK, AI
+o	Nome - NVARCHAR(MAX)
+o	Quantidade - NVARCHAR(MAX)
+o	Valor - NVARCHAR(MAX)
+o	Tipo - NVARCHAR(MAX)
+o	Ataque - NVARCHAR(MAX)
+o	Protecao - NVARCHAR(MAX)
+o	PoderProfanoId - INT, NN, FK
+o	PersonagemId - INT, NN, FK
+
+
+•	PoderProfano:
+o	Id - INT, NN, PK, AI
+o	Nome - NVARCHAR(MAX)
+o	Descricao - NVARCHAR(MAX)
+
+
+### Namespaces
+•	WebRPGCreation.Controllers
+•	WebRPGCreation.Data
+•	WebRPGCreation.Models
+•	WebRPGCreation.Migrations
+
+### Classes e métodos
+	WebRPGCreation
+•	Program
+
+	Data
+•	ApplicationDbContext
+
+	Models
+•	Equipamento
+•	Especialidade
+•	Grupo
+•	Personagem
+•	PoderProfano
+•	ErrorViewModel
+
+	Controllers
+•	EquipamentoController
+o	Index( )
+o	Details( )
+o	Create( )
+o	Edit( )
+o	Delete( )
+o	DeleteConfirmed( )
+o	EquipamentoExists( )
+
+•	EspecialidadeController
+o	Index( )
+o	Details( )
+o	Create( )
+o	Edit( )
+o	Delete( )
+o	DeleteConfirmed( )
+o	EspecialidadeExists( )
+
+•	GrupoController
+o	Index( )
+o	Details( )
+o	Create( )
+o	Edit( )
+o	Delete( )
+o	DeleteConfirmed( )
+o	GrupoExists( )
+
+
+•	PersonagemController
+o	Index( )
+o	Details( )
+o	Create( )
+o	Edit( )
+o	Delete( )
+o	DeleteConfirmed( )
+o	PersonagemExists( )
+
+•	PoderProfanoController
+o	Index( )
+o	Details( )
+o	Create( )
+o	Edit( )
+o	Delete( )
+o	DeleteConfirmed( )
+o	PoderProfanoeExists( )
+
+•	HomeController
+o	Index( )
+o	Error( )
+
+
+### Outras informações
+•	Material Extra (wwwroot):
+o	Sketchy Theme (Bootstrap)
+o	Image
+
+
