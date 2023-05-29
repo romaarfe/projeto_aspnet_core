@@ -57,13 +57,13 @@
 ### Lista de tabelas, campos e tipos
 * Grupo:
   * Id - INT, NN, PK, AI
-o	Nome - NVARCHAR(MAX)
-o	Descricao - NVARCHAR(MAX)
-o	DataFim - DATETIME2(7)
-o	DataInicio - DATETIME2(7)
+  * Nome - NVARCHAR(MAX)
+  * Descricao - NVARCHAR(MAX)
+  * DataFim - DATETIME2(7)
+  * DataInicio - DATETIME2(7)
 
-•	Personagem:
-o	Id - INT, NN, PK, AI
+* Personagem:
+  * Id - INT, NN, PK, AI
 o	Nome - NVARCHAR(MAX)
 o	Descricao - NVARCHAR(MAX)
 o	Nivel - NVARCHAR(MAX)
