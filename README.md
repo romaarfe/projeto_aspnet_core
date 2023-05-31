@@ -158,7 +158,7 @@
 <br>
 <img width="1403" alt="Captura de ecrã 2023-05-31, às 09 32 17" src="https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/6bd1eca7-25f2-4546-8a62-1d0e0649c523">
 <br>
-
+<br>
 
   * GrupoController
     * Index( )
@@ -173,7 +173,7 @@
 <br>
 <img width="1403" alt="Captura de ecrã 2023-05-31, às 09 31 44" src="https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/5f08d8d9-1a45-4261-a88d-2251f422db8e">
 <br>
-
+<br>
 
   * PersonagemController
     * Index( )
@@ -188,7 +188,7 @@
 <br>
 <img width="1403" alt="Captura de ecrã 2023-05-31, às 09 31 56" src="https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/f800ba8a-da94-4b03-af4e-0111c9475cd9">
 <br>
-
+<br>
 
   * PoderProfanoController
     * Index( )
@@ -203,7 +203,7 @@
 <br>
 <img width="1399" alt="Captura de ecrã 2023-05-31, às 09 32 27" src="https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/0aa4ca8c-4f7e-4ea1-a3a1-20dd8283fbe5">
 <br>
- 
+<br>
  
   * HomeController
     * Index( )
@@ -213,7 +213,7 @@
 <br>
 <img width="1406" alt="Captura de ecrã 2023-05-31, às 09 31 03" src="https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/5169dd1d-610f-443a-b10f-a3302bcef2de">
 <br>
-
+<br>
 
 ### Outras informações
 * Material Extra (wwwroot):
