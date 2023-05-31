@@ -1,0 +1,70 @@
+﻿@model WebRPGCreation.Models.Equipamento
+
+@{
+    ViewData["Title"] = "Deletar Equipamento";
+}
+<br />
+<h1><b>DELETAR</b></h1>
+<p></p>
+<h3><b>Tem certeza que deseja deletar isto?</b></h3>
+<p></p>
+<div>
+    <h4><b>Equipamento</b></h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <b>Nome</b>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            <b>Quantidade</b>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt class = "col-sm-2">
+            <b>Valor</b>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+        <dt class = "col-sm-2">
+            <b>Tipo</b>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+        <dt class = "col-sm-2">
+            <b>Ataque</b>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ataque)
+        </dd>
+        <dt class = "col-sm-2">
+            <b>Proteção</b>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Protecao)
+        </dd>
+        <dt class = "col-sm-2">
+            <b>Poder Profano</b>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PoderProfano.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            <b>Personagem</b>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Personagem.Nome)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> &nbsp;
+        <a type="button" class="btn btn-secondary" asp-action="Index">Voltar</a>
+    </form>
+</div>

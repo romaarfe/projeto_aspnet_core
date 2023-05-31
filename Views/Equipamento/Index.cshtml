@@ -1,0 +1,80 @@
+﻿@model IEnumerable<WebRPGCreation.Models.Equipamento>
+
+@{
+    ViewData["Title"] = "Equipamentos";
+}
+
+<br />
+<h1><b>EQUIPAMENTOS</b><img width="30%" align="right" src="~/Equipment.jpg" /></h1>
+<p></p>
+<p>
+    <a type="button" class="btn btn-primary" asp-action="Create">Novo Equipamento</a>
+</p>
+<br />
+<table class="table table-hover table-group-divider table-striped">
+    <thead>
+        <tr class="table-dark">
+            <th>
+                <b>NOME</b>
+            </th>
+            <th>
+                <b>QT.</b>
+            </th>
+            <th>
+                <b>VALOR</b>
+            </th>
+            <th>
+                <b>TIPO</b>
+            </th>
+            <th>
+                <b>ATAQUE</b>
+            </th>
+            <th>
+                <b>PROTEÇÃO</b>
+            </th>
+            <th>
+                <b>PODER</b>
+            </th>
+            <th>
+                <b>PERSONAGEM</b>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="table-active">
+                <td>
+                    <b>@Html.DisplayFor(modelItem => item.Nome)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ataque)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Protecao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PoderProfano.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Personagem.Nome)
+                </td>
+                <td>
+                    <a type="button" class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> &nbsp;
+                    <a type="button" class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> &nbsp;
+                    <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
