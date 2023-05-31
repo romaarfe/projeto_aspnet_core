@@ -1,0 +1,90 @@
+﻿@model IEnumerable<WebRPGCreation.Models.Personagem>
+
+@{
+    ViewData["Title"] = "Personagens";
+}
+<br />
+<h1><b>PERSONAGENS</b><img width="30%" align="right" src="~/Attack02.jpg" /></h1>
+<p></p>
+<p>
+    <a type="button" class="btn btn-primary" asp-action="Create">Novo Personagem</a>
+</p>
+<br />
+<table class="table table-hover table-group-divider table-striped">
+    <thead>
+        <tr class="table-dark">
+            <th>
+                <b>NOME</b>
+            </th>
+            <th>
+                <b>DESCRIÇÃO</b>
+            </th>
+            <th>
+                <b>NÍVEL</b>
+            </th>
+            <th>
+                <b>XP</b>
+            </th>
+            <th>
+                <b>PODER</b>
+            </th>
+            <th>
+                <b>AGIR</b>
+            </th>
+            <th>
+                <b>MENTE</b>
+            </th>
+            <th>
+                <b>HP</b>
+            </th>
+            <th>
+                <b>MOEDAS</b>
+            </th>
+            <th>
+                <b>GRUPO</b>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="table-active">
+            <td>
+                <b>@Html.DisplayFor(modelItem => item.Nome)</b>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td align="center">
+                @Html.DisplayFor(modelItem => item.Nivel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.XP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoderAtual) / @Html.DisplayFor(modelItem => item.PoderMaximo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgirAtual) / @Html.DisplayFor(modelItem => item.AgirMaximo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenteAtual) / @Html.DisplayFor(modelItem => item.MenteMaximo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HpAtual) / @Html.DisplayFor(modelItem => item.HpMaximo)
+            </td>
+            <td align="center">
+                @Html.DisplayFor(modelItem => item.Moeda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grupo.Nome)
+            </td>
+            <td>
+                <a type="button" class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> &nbsp;
+                <a type="button" class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> &nbsp;
+                <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,11 +1,15 @@
-﻿namespace WebRPGCreation.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebRPGCreation.Models
 {
     public class Personagem
     {
         public int Id { get; set; }
 
+        [Required(ErrorMessage = "O nome de Personagem é obrigatório", AllowEmptyStrings = false)]
         public string? Nome { get; set; }
 
+        [Required(ErrorMessage = "A descrição do Personagem é obrigatória", AllowEmptyStrings = false)]
         public string? Descricao { get; set; }
 
         public string? Nivel { get; set; }

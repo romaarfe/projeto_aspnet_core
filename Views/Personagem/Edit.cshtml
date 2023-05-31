@@ -1,0 +1,110 @@
+﻿@model WebRPGCreation.Models.Personagem
+
+@{
+    ViewData["Title"] = "Editar Personagem";
+}
+<br />
+<h1><b>EDITAR</b></h1>
+<p></p>
+<h4><b>Personagem</b></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"><b>Nome</b></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"><b>Descrição</b></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="Nivel" class="control-label"><b>Nível</b></label>
+                <input asp-for="Nivel" class="form-control" />
+                <span asp-validation-for="Nivel" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="XP" class="control-label"><b>XP</b></label>
+                <input asp-for="XP" class="form-control" />
+                <span asp-validation-for="XP" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="PoderAtual" class="control-label"><b>Poder Atual</b></label>
+                <input asp-for="PoderAtual" class="form-control" />
+                <span asp-validation-for="PoderAtual" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="PoderMaximo" class="control-label"><b>Poder Máximo</b></label>
+                <input asp-for="PoderMaximo" class="form-control" />
+                <span asp-validation-for="PoderMaximo" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="AgirAtual" class="control-label"><b>Agir Atual</b></label>
+                <input asp-for="AgirAtual" class="form-control" />
+                <span asp-validation-for="AgirAtual" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="AgirMaximo" class="control-label"><b>Agir Máximo</b></label>
+                <input asp-for="AgirMaximo" class="form-control" />
+                <span asp-validation-for="AgirMaximo" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="MenteAtual" class="control-label"><b>Mente Atual</b></label>
+                <input asp-for="MenteAtual" class="form-control" />
+                <span asp-validation-for="MenteAtual" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="MenteMaximo" class="control-label"><b>Mente Máximo</b></label>
+                <input asp-for="MenteMaximo" class="form-control" />
+                <span asp-validation-for="MenteMaximo" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="HpAtual" class="control-label"><b>HP Atual</b></label>
+                <input asp-for="HpAtual" class="form-control" />
+                <span asp-validation-for="HpAtual" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="HpMaximo" class="control-label"><b>HP Máximo</b></label>
+                <input asp-for="HpMaximo" class="form-control" />
+                <span asp-validation-for="HpMaximo" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="Moeda" class="control-label"><b>Moedas</b></label>
+                <input asp-for="Moeda" class="form-control" />
+                <span asp-validation-for="Moeda" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="GrupoId" class="control-label"><b>Grupo</b></label>
+                <select asp-for="GrupoId" class="form-control" asp-items="ViewBag.GrupoId"></select>
+                <span asp-validation-for="GrupoId" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-success" /> &nbsp;
+                <a type="button" class="btn btn-secondary" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

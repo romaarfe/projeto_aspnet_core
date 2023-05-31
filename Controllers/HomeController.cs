@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WebRPGCreation.Data;
 using WebRPGCreation.Models;
 
@@ -15,8 +17,12 @@ public class HomeController : Controller
         db = context;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(string codigo)
     {
+        SelectList listaNome = new SelectList(db.Personagem, "Id", "Nome");
+        ViewBag.NOME = listaNome;
+        ViewBag.ID = Convert.ToInt32(codigo);
+
         List<Personagem> listaPersonagem = new List<Personagem>();
         listaPersonagem = db.Personagem.ToList();
         ViewBag.PERSONAGEM = listaPersonagem;
@@ -36,8 +42,6 @@ public class HomeController : Controller
 
         return View();
     }
-
-
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

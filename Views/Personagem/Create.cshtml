@@ -1,0 +1,85 @@
+﻿@model WebRPGCreation.Models.Personagem
+
+@{
+    ViewData["Title"] = "Criar Personagem";
+}
+<br />
+<h1><b>CRIAR</b></h1>
+<p></p>
+<h4><b>Personagem</b></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"><b>Nome</b></label>
+                <input asp-for="Nome" class="form-control" placeholder="Nome do personagem..." />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"><b>Descrição</b></label>
+                <input asp-for="Descricao" class="form-control" placeholder="Utilize três adjetivos..."/>
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="Nivel" class="control-label"><b>Nível</b></label>
+                <input asp-for="Nivel" class="form-control" id="readOnlyInput " type="text" placeholder="@Model.Nivel" readonly="" />
+                <span asp-validation-for="Nivel" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="XP" class="control-label"><b>XP</b></label>
+                <input asp-for="XP" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.XP" readonly="" />
+                <span asp-validation-for="XP" class="text-danger"></span>
+            </div>
+            <p></p>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="PoderAtual" class="control-label"><b>Poder</b></label>
+                <input asp-for="PoderAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.PoderAtual" readonly="" />
+                <span asp-validation-for="PoderAtual" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="AgirAtual" class="control-label"><b>Agir</b></label>
+                <input asp-for="AgirAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.AgirAtual" readonly="" />
+                <span asp-validation-for="AgirAtual" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="MenteAtual" class="control-label"><b>Mente</b></label>
+                <input asp-for="MenteAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.MenteAtual" readonly="" />
+                <span asp-validation-for="MenteAtual" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="HpAtual" class="control-label"><b>HP</b></label>
+                <input asp-for="HpAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.HpAtual" readonly="" />
+                <span asp-validation-for="HpAtual" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="Moeda" class="control-label"><b>Moedas</b></label>
+                <input asp-for="Moeda" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.Moeda" readonly="" />
+                <span asp-validation-for="Moeda" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="GrupoId" class="control-label"><b>Grupo</b></label>
+                <select asp-for="GrupoId" class="form-control" asp-items="ViewBag.GrupoId"></select>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-success" /> &nbsp;
+                <a type="button" class="btn btn-secondary" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
