@@ -139,11 +139,11 @@
     * DeleteConfirmed( )
     * EquipamentoExists( )
 
-<br>
+
 <br>
 <img width="1404" alt="Captura de ecrã 2023-05-31, às 09 32 08" src="https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/d8d9d389-cea5-417d-829d-38a54b051bbe">
 <br>
-
+<br>
 
   * EspecialidadeController
     * Index( )
