@@ -114,9 +114,11 @@
 ### Classes e métodos
 * WebRPGCreation
   * Program
+
 <br>
 <img width="538" alt="Captura de ecrã 2023-05-31, às 09 31 20" src="https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/fcb2fcf9-7d77-476c-961a-b3526b0f0fe4">
 <br>
+
 * Data
   *	ApplicationDbContext
   
