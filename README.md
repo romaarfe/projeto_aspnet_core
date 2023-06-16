@@ -62,7 +62,7 @@
   * Desisti de múltiplos métodos Random
   * Testei as variáveis de Classe como Static
   * Testei métodos com retorno
-  * Objetivo era evitar modificação dos Value através do INspect via HTML e ao fazer Submit
+  * Objetivo era evitar modificação dos Value através do Inspect via HTML e ao fazer Submit
   * Resolvi da maneira mais simples, porém funcional
 
 * Modificações em 2023-06-03 e 04:
