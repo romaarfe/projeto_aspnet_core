@@ -1,4 +1,14 @@
-﻿@model WebRPGCreation.Models.Especialidade
+﻿<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
+
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO REFERENTE AO CRIAR DO MODELO ESPECIALIDADE
+-->
+
+@model WebRPGCreation.Models.Especialidade
 
 @{
     ViewData["Title"] = "Criar Especialidade";
@@ -26,7 +36,7 @@
             <p></p>
             <div class="form-group">
                 <label asp-for="PersonagemId" class="control-label"><b>Personagem</b></label>
-                <select asp-for="PersonagemId" class ="form-control" asp-items="ViewBag.PersonagemId"></select>
+                <select asp-for="PersonagemId" class="form-control" asp-items="ViewBag.PersonagemId"></select>
             </div>
             <p></p>
             <div class="form-group">

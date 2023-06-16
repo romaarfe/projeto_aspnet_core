@@ -1,31 +1,49 @@
-﻿@using WebRPGCreation.Models
+﻿<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
 
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO REFERENTE À APRESENTAÇÃO DO HOMECONTROLLER
+-->
+
+@using WebRPGCreation.Models
+@using Microsoft.AspNetCore.Identity
+
+<!--
+    PARA USO DE LOGIN E GENERICAMENTO DE UTILIZADORES/ROLES
+-->
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!--
+    ESTILO APENAS PARA MODIFICAR LIGEIRAMENTE O VISUAL DA TABELA
+-->
 <style>
-	table,
-	th,
-	td {
-		border: 2px solid black;
-		border-collapse: collapse;
-		width: 1px;
-		white-space: nowrap;
-	}
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 1px;
+        white-space: nowrap;
+    }
 
-	table {
-		width: 50%;
-	}
+    table {
+        width: 50%;
+    }
 
-		table.fixed {
-			table-layout: fixed;
-		}
+        table.fixed {
+            table-layout: fixed;
+        }
 
-			table.fixed td {
-				overflow: hidden;
-			}
-
+            table.fixed td {
+                overflow: hidden;
+            }
 </style>
 
 @{
-	ViewData["Title"] = "Lista de Personagens";
+    ViewData["Title"] = "Lista de Personagens";
 }
 
 <br />
@@ -34,279 +52,298 @@
 <hr />
 @using (Html.BeginForm())
 {
-	@Html.DropDownList("codigo", (SelectList)ViewBag.NOME, "TODOS OS PERSONAGENS")
-	@:&nbsp;
-	<input type="submit" class="btn btn-primary" value="OK" />
-}
+    @Html.DropDownList("codigo", (SelectList)ViewBag.NOME, "TODOS OS PERSONAGENS")
+    @:&nbsp;
+    <input type="submit" class="btn btn-primary" value="OK" />
 
+    <!--
+        PARA APRESENTAÇÃO DAS ROLES
+    -->
+    @if (User.IsInRole("GM"))
+    {
+        <h2 class="text-danger" style="float:right"><b>GAME MASTER</b></h2>
+    }
+    else if (User.IsInRole("Jogador"))
+    {
+        <h2 class="text-success" style="float:right"><b>JOGADOR</b></h2>
+    }
+    else
+    {
+        <h2 class="text-info" style="float:right"><b>VISITANTE</b></h2>
+    }
+
+}
+<!--
+    RENDERIZAÇÃO PRINCIPAL DAS TABELAS
+-->
 <hr />
 <br />
 @foreach (var item in ViewBag.PERSONAGEM)
 {
-	if (item.Id == ViewBag.ID)
-	{
-		<table width="50%" class="table table-hover table-group-divider table-striped">
-			<thead>
-				<tr class="table-dark">
-					<th scope="col">
-						<b>NOME</b>
-					</th>
-					<th scope="col">
-						<b>DESCRIÇÃO</b>
-					</th>
-					<th scope="col">
-						<b>NÍVEL</b>
-					</th>
-					<th scope="col">
-						<b>XP</b>
-					</th>
-					<th scope="col">
-						<b>PODER</b>
-					</th>
-					<th scope="col">
-						<b>AGIR</b>
-					</th>
-					<th scope="col">
-						<b>MENTE</b>
-					</th>
-					<th scope="col">
-						<b>HP</b>
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class="table-active">
-					<td>
-						<b>@item.Nome</b>
-					</td>
-					<td>
-						@item.Descricao
-					</td>
-					<td align="center">
-						@item.Nivel
-					</td>
-					<td align="center">
-						@item.XP
-					</td>
-					<td align="center">
-						@item.PoderAtual / @item.PoderMaximo
-					</td>
-					<td align="center">
-						@item.AgirAtual / @item.AgirMaximo
-					</td>
-					<td align="center">
-						@item.MenteAtual / @item.MenteMaximo
-					</td>
-					<td align="center">
-						@item.HpAtual / @item.HpMaximo
-					</td>
-					<table width="50%" class="table table-hover table-striped">
-						<thead>
-							<tr class="table-dark">
-								<th scope="col">
-									<b>ESPECIALIDADES</b>
-									<hr />
-									<b>Nome - Descrição</b>
-								</th>
-								<th scope="col">
-									<b>EQUIPAMENTOS</b> <b style="float:right">&nbsp; MOEDAS &nbsp; @item.Moeda &nbsp;</b>
-									<hr />
-									<b>Nome &nbsp;|&nbsp; Quantidade &nbsp;|&nbsp; Ataque &nbsp;|&nbsp; Proteção &nbsp;|&nbsp; Poder Profano</b>
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="table-active">
-								<td>
-									@foreach (var subitem in ViewBag.ESPECIALIDADE)
-									{
-										if (item.Id == subitem.PersonagemId)
-										{
-											<b>@subitem.Nome</b> @:- @subitem.Descricao
-											<br />
-										}
-									}
-								</td>
-								<td>
-									@{
-										int n = 1;
-									}
-									@foreach (var subitem in ViewBag.EQUIPAMENTO)
-									{
-										string m = "NÃO HÁ MAIS ESPAÇO!!!";
-										string p = "";
-										if (item.Id == subitem.PersonagemId)
-										{
+    if (item.Id == ViewBag.ID)
+    {
+        <table width="50%" class="table table-hover table-group-divider table-striped">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">
+                        <b>NOME</b>
+                    </th>
+                    <th scope="col">
+                        <b>DESCRIÇÃO</b>
+                    </th>
+                    <th scope="col">
+                        <b>NÍVEL</b>
+                    </th>
+                    <th scope="col">
+                        <b>XP</b>
+                    </th>
+                    <th scope="col">
+                        <b>PODER</b>
+                    </th>
+                    <th scope="col">
+                        <b>AGIR</b>
+                    </th>
+                    <th scope="col">
+                        <b>MENTE</b>
+                    </th>
+                    <th scope="col">
+                        <b>HP</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active">
+                    <td>
+                        <b>@item.Nome</b>
+                    </td>
+                    <td>
+                        @item.Descricao
+                    </td>
+                    <td align="center">
+                        @item.Nivel
+                    </td>
+                    <td align="center">
+                        @item.XP
+                    </td>
+                    <td align="center">
+                        @item.PoderAtual / @item.PoderMaximo
+                    </td>
+                    <td align="center">
+                        @item.AgirAtual / @item.AgirMaximo
+                    </td>
+                    <td align="center">
+                        @item.MenteAtual / @item.MenteMaximo
+                    </td>
+                    <td align="center">
+                        @item.HpAtual / @item.HpMaximo
+                    </td>
+                    <table width="50%" class="table table-hover table-striped">
+                        <thead>
+                            <tr class="table-dark">
+                                <th scope="col">
+                                    <b>ESPECIALIDADES</b>
+                                    <hr />
+                                    <b>Nome - Descrição</b>
+                                </th>
+                                <th scope="col">
+                                    <b>EQUIPAMENTOS</b> <b style="float:right">&nbsp; MOEDAS &nbsp; @item.Moeda &nbsp;</b>
+                                    <hr />
+                                    <b>Nome &nbsp;|&nbsp; Quantidade &nbsp;|&nbsp; Ataque &nbsp;|&nbsp; Proteção &nbsp;|&nbsp; Poder Profano</b>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-active">
+                                <td>
+                                    @foreach (var subitem in ViewBag.ESPECIALIDADE)
+                                    {
+                                        if (item.Id == subitem.PersonagemId)
+                                        {
+                                            <b>@subitem.Nome</b> @:- @subitem.Descricao
+                                            <br />
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @{
+                                        int n = 1;
+                                    }
+                                    @foreach (var subitem in ViewBag.EQUIPAMENTO)
+                                    {
+                                        string m = "NÃO HÁ MAIS ESPAÇO!!!";
+                                        string p = "";
+                                        if (item.Id == subitem.PersonagemId)
+                                        {
 
-											if (n > Convert.ToInt32(item.PoderMaximo))
-											{
-												<b class="text-danger">@m</b>
-											}
-											else
-											{
-												@n @:- <b>@subitem.Nome</b> &nbsp;|&nbsp; @subitem.Quantidade &nbsp;|&nbsp; @subitem.Ataque &nbsp;|&nbsp; @subitem.Protecao &nbsp;|&nbsp;
-												n++;
-											}
-
-
-											@foreach (var profano in ViewBag.PROFANO)
-											{
-												if (subitem.PoderProfanoId == profano.Id)
-												{
-													if (n > Convert.ToInt32(item.PoderMaximo))
-													{
-														@p
-													}
-													else
-													{
-														<b>@profano.Nome</b> @:&nbsp;|&nbsp; @profano.Descricao
-													}
-												}
-											}
-											<br />
-										}
-
-									}
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</tr>
-			</tbody>
-		</table>
-	}
-	else if(ViewBag.ID == 0)
-	{
-
-		<table width="50%" class="table table-hover table-group-divider table-striped">
-			<thead>
-				<tr class="table-dark">
-					<th scope="col">
-						<b>NOME</b>
-					</th>
-					<th scope="col">
-						<b>DESCRIÇÃO</b>
-					</th>
-					<th scope="col">
-						<b>NÍVEL</b>
-					</th>
-					<th scope="col">
-						<b>XP</b>
-					</th>
-					<th scope="col">
-						<b>PODER</b>
-					</th>
-					<th scope="col">
-						<b>AGIR</b>
-					</th>
-					<th scope="col">
-						<b>MENTE</b>
-					</th>
-					<th scope="col">
-						<b>HP</b>
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class="table-active">
-					<td>
-						<b>@item.Nome</b>
-					</td>
-					<td>
-						@item.Descricao
-					</td>
-					<td align="center">
-						@item.Nivel
-					</td>
-					<td align="center">
-						@item.XP
-					</td>
-					<td align="center">
-						@item.PoderAtual / @item.PoderMaximo
-					</td>
-					<td align="center">
-						@item.AgirAtual / @item.AgirMaximo
-					</td>
-					<td align="center">
-						@item.MenteAtual / @item.MenteMaximo
-					</td>
-					<td align="center">
-						@item.HpAtual / @item.HpMaximo
-					</td>
-					<table width="50%" class="table table-hover table-striped">
-						<thead>
-							<tr class="table-dark">
-								<th scope="col">
-									<b>ESPECIALIDADES</b>
-									<hr />
-									<b>Nome - Descrição</b>
-								</th>
-								<th scope="col">
-									<b>EQUIPAMENTOS</b> <b style="float:right">&nbsp; MOEDAS &nbsp; @item.Moeda &nbsp;</b>
-									<hr />
-									<b>Nome &nbsp;|&nbsp; Quantidade &nbsp;|&nbsp; Ataque &nbsp;|&nbsp; Proteção &nbsp;|&nbsp; Poder Profano</b>
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="table-active">
-								<td>
-									@foreach (var subitem in ViewBag.ESPECIALIDADE)
-									{
-										if (item.Id == subitem.PersonagemId)
-										{
-											<b>@subitem.Nome</b> @:- @subitem.Descricao
-											<br />
-										}
-									}
-								</td>
-								<td>
-									@{
-										int n = 1;
-									}
-									@foreach (var subitem in ViewBag.EQUIPAMENTO)
-									{
-										string m = "NÃO HÁ MAIS ESPAÇO!!!";
-										string p = "";
-										if (item.Id == subitem.PersonagemId)
-										{
-
-											if (n > Convert.ToInt32(item.PoderMaximo))
-											{
-												<b class="text-danger">@m</b>
-											}
-											else
-											{
-												@n @:- <b>@subitem.Nome</b> &nbsp;|&nbsp; @subitem.Quantidade &nbsp;|&nbsp; @subitem.Ataque &nbsp;|&nbsp; @subitem.Protecao &nbsp;|&nbsp;
-												n++;
-											}
+                                            if (n > Convert.ToInt32(item.PoderMaximo))
+                                            {
+                                                <b class="text-danger">@m</b>
+                                            }
+                                            else
+                                            {
+                                                @n @:- <b>@subitem.Nome</b> &nbsp;|&nbsp; @subitem.Quantidade &nbsp;|&nbsp; @subitem.Ataque &nbsp;|&nbsp; @subitem.Protecao &nbsp;|&nbsp;
+                                                n++;
+                                            }
 
 
-											@foreach (var profano in ViewBag.PROFANO)
-											{
-												if (subitem.PoderProfanoId == profano.Id)
-												{
-													if (n > Convert.ToInt32(item.PoderMaximo))
-													{
-														@p
-													}
-													else
-													{
-														<b>@profano.Nome</b> @:&nbsp;|&nbsp; @profano.Descricao
-													}
-												}
-											}
-											<br />
-										}
+                                            @foreach (var profano in ViewBag.PROFANO)
+                                            {
+                                                if (subitem.PoderProfanoId == profano.Id)
+                                                {
+                                                    if (n > Convert.ToInt32(item.PoderMaximo))
+                                                    {
+                                                        @p
+                                                    }
+                                                    else
+                                                    {
+                                                        <b>@profano.Nome</b> @:&nbsp;|&nbsp; @profano.Descricao
+                                                    }
+                                                }
+                                            }
+                                            <br />
+                                        }
 
-									}
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</tr>
-			</tbody>
-		</table>
-	}
+                                    }
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+            </tbody>
+        </table>
+    }
+    else if (ViewBag.ID == 0)
+    {
+
+        <table width="50%" class="table table-hover table-group-divider table-striped">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">
+                        <b>NOME</b>
+                    </th>
+                    <th scope="col">
+                        <b>DESCRIÇÃO</b>
+                    </th>
+                    <th scope="col">
+                        <b>NÍVEL</b>
+                    </th>
+                    <th scope="col">
+                        <b>XP</b>
+                    </th>
+                    <th scope="col">
+                        <b>PODER</b>
+                    </th>
+                    <th scope="col">
+                        <b>AGIR</b>
+                    </th>
+                    <th scope="col">
+                        <b>MENTE</b>
+                    </th>
+                    <th scope="col">
+                        <b>HP</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active">
+                    <td>
+                        <b>@item.Nome</b>
+                    </td>
+                    <td>
+                        @item.Descricao
+                    </td>
+                    <td align="center">
+                        @item.Nivel
+                    </td>
+                    <td align="center">
+                        @item.XP
+                    </td>
+                    <td align="center">
+                        @item.PoderAtual / @item.PoderMaximo
+                    </td>
+                    <td align="center">
+                        @item.AgirAtual / @item.AgirMaximo
+                    </td>
+                    <td align="center">
+                        @item.MenteAtual / @item.MenteMaximo
+                    </td>
+                    <td align="center">
+                        @item.HpAtual / @item.HpMaximo
+                    </td>
+                    <table width="50%" class="table table-hover table-striped">
+                        <thead>
+                            <tr class="table-dark">
+                                <th scope="col">
+                                    <b>ESPECIALIDADES</b>
+                                    <hr />
+                                    <b>Nome - Descrição</b>
+                                </th>
+                                <th scope="col">
+                                    <b>EQUIPAMENTOS</b> <b style="float:right">&nbsp; MOEDAS &nbsp; @item.Moeda &nbsp;</b>
+                                    <hr />
+                                    <b>Nome &nbsp;|&nbsp; Quantidade &nbsp;|&nbsp; Ataque &nbsp;|&nbsp; Proteção &nbsp;|&nbsp; Poder Profano</b>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-active">
+                                <td>
+                                    @foreach (var subitem in ViewBag.ESPECIALIDADE)
+                                    {
+                                        if (item.Id == subitem.PersonagemId)
+                                        {
+                                            <b>@subitem.Nome</b> @:- @subitem.Descricao
+                                            <br />
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @{
+                                        int n = 1;
+                                    }
+                                    @foreach (var subitem in ViewBag.EQUIPAMENTO)
+                                    {
+                                        string m = "NÃO HÁ MAIS ESPAÇO!!!";
+                                        string p = "";
+                                        if (item.Id == subitem.PersonagemId)
+                                        {
+
+                                            if (n > Convert.ToInt32(item.PoderMaximo))
+                                            {
+                                                <b class="text-danger">@m</b>
+                                            }
+                                            else
+                                            {
+                                                @n @:- <b>@subitem.Nome</b> &nbsp;|&nbsp; @subitem.Quantidade &nbsp;|&nbsp; @subitem.Ataque &nbsp;|&nbsp; @subitem.Protecao &nbsp;|&nbsp;
+                                                n++;
+                                            }
+
+
+                                            @foreach (var profano in ViewBag.PROFANO)
+                                            {
+                                                if (subitem.PoderProfanoId == profano.Id)
+                                                {
+                                                    if (n > Convert.ToInt32(item.PoderMaximo))
+                                                    {
+                                                        @p
+                                                    }
+                                                    else
+                                                    {
+                                                        <b>@profano.Nome</b> @:&nbsp;|&nbsp; @profano.Descricao
+                                                    }
+                                                }
+                                            }
+                                            <br />
+                                        }
+
+                                    }
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+            </tbody>
+        </table>
+    }
 
 }

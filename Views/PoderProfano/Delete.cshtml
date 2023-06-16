@@ -1,4 +1,14 @@
-﻿@model WebRPGCreation.Models.PoderProfano
+﻿<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
+
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO REFERENTE AO DELETAR DO MODELO PODER PROFANO
+-->
+
+@model WebRPGCreation.Models.PoderProfano
 
 @{
     ViewData["Title"] = "Deletar Poder Profano";
@@ -12,20 +22,20 @@
     <h4><b>Poder Profano</b></h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             <b>Nome</b>
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nome)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             <b>Descrição</b>
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Descricao)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Deletar" class="btn btn-danger" /> &nbsp;

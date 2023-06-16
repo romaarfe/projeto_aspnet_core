@@ -1,4 +1,14 @@
-﻿@model WebRPGCreation.Models.Personagem
+﻿<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
+
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO REFERENTE AO DELETAR DO MODELO PERSONAGEM
+-->
+
+@model WebRPGCreation.Models.Personagem
 
 @{
     ViewData["Title"] = "Deletar Personagem";
@@ -97,7 +107,7 @@
             @Html.DisplayFor(model => model.Grupo.Nome)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Deletar" class="btn btn-danger" /> &nbsp;

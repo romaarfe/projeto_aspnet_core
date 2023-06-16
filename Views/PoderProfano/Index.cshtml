@@ -1,4 +1,14 @@
-﻿@model IEnumerable<WebRPGCreation.Models.PoderProfano>
+﻿<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
+
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO REFERENTE À APRESENTAÇÃO DO MODELO PODER PROFANO
+-->
+
+@model IEnumerable<WebRPGCreation.Models.PoderProfano>
 
 @{
     ViewData["Title"] = "Poderes Profanos";
@@ -23,20 +33,21 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr class="table-active">
-            <td>
-                <b>@Html.DisplayFor(modelItem => item.Nome)</b>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                <a type="button" class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> &nbsp;
-                <a type="button" class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> &nbsp;
-                <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr class="table-active">
+                <td>
+                    <b>@Html.DisplayFor(modelItem => item.Nome)</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    <a type="button" class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> &nbsp;
+                    <a type="button" class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> &nbsp;
+                    <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

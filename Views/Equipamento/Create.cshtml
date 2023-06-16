@@ -1,4 +1,14 @@
-﻿@model WebRPGCreation.Models.Equipamento
+﻿<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
+
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO REFERENTE AO CRIAR DO MODELO EQUIPAMENTO
+-->
+
+@model WebRPGCreation.Models.Equipamento
 
 @{
     ViewData["Title"] = "Criar Equipamento";
@@ -50,12 +60,12 @@
             <p></p>
             <div class="form-group">
                 <label asp-for="PoderProfanoId" class="control-label"><b>Poder Profano</b></label>
-                <select asp-for="PoderProfanoId" class ="form-control" asp-items="ViewBag.PoderProfanoId"></select>
+                <select asp-for="PoderProfanoId" class="form-control" asp-items="ViewBag.PoderProfanoId"></select>
             </div>
             <p></p>
             <div class="form-group">
                 <label asp-for="PersonagemId" class="control-label"><b>Personagem</b></label>
-                <select asp-for="PersonagemId" class ="form-control" asp-items="ViewBag.PersonagemId"></select>
+                <select asp-for="PersonagemId" class="form-control" asp-items="ViewBag.PersonagemId"></select>
             </div>
             <p></p>
             <div class="form-group">

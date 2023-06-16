@@ -1,4 +1,14 @@
-﻿@model WebRPGCreation.Models.Personagem
+﻿<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
+
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO REFERENTE AO CRIAR DO MODELO PERSONAGEM
+-->
+
+@model WebRPGCreation.Models.Personagem
 
 @{
     ViewData["Title"] = "Criar Personagem";
@@ -20,50 +30,49 @@
             <p></p>
             <div class="form-group">
                 <label asp-for="Descricao" class="control-label"><b>Descrição</b></label>
-                <input asp-for="Descricao" class="form-control" placeholder="Utilize três adjetivos..."/>
+                <input asp-for="Descricao" class="form-control" placeholder="Utilize três adjetivos..." />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
             <p></p>
             <div class="form-group">
                 <label asp-for="Nivel" class="control-label"><b>Nível</b></label>
-                <input asp-for="Nivel" class="form-control" id="readOnlyInput " type="text" placeholder="@Model.Nivel" readonly="" />
+                <input asp-for="Nivel" class="form-control" id="readOnlyInput " type="text" placeholder="@Model.Nivel" value="" readonly="" />
                 <span asp-validation-for="Nivel" class="text-danger"></span>
             </div>
             <p></p>
             <div class="form-group">
                 <label asp-for="XP" class="control-label"><b>XP</b></label>
-                <input asp-for="XP" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.XP" readonly="" />
+                <input asp-for="XP" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.XP" value="" readonly="" />
                 <span asp-validation-for="XP" class="text-danger"></span>
             </div>
             <p></p>
-            <p></p>
             <div class="form-group">
                 <label asp-for="PoderAtual" class="control-label"><b>Poder</b></label>
-                <input asp-for="PoderAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.PoderAtual" readonly="" />
+                <input asp-for="PoderAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.PoderAtual" value="" readonly="" />
                 <span asp-validation-for="PoderAtual" class="text-danger"></span>
             </div>
             <p></p>
             <div class="form-group">
                 <label asp-for="AgirAtual" class="control-label"><b>Agir</b></label>
-                <input asp-for="AgirAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.AgirAtual" readonly="" />
+                <input asp-for="AgirAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.AgirAtual" value="" readonly="" />
                 <span asp-validation-for="AgirAtual" class="text-danger"></span>
             </div>
             <p></p>
             <div class="form-group">
                 <label asp-for="MenteAtual" class="control-label"><b>Mente</b></label>
-                <input asp-for="MenteAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.MenteAtual" readonly="" />
+                <input asp-for="MenteAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.MenteAtual" value="" readonly="" />
                 <span asp-validation-for="MenteAtual" class="text-danger"></span>
             </div>
             <p></p>
             <div class="form-group">
                 <label asp-for="HpAtual" class="control-label"><b>HP</b></label>
-                <input asp-for="HpAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.HpAtual" readonly="" />
+                <input asp-for="HpAtual" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.HpAtual" value="" readonly="" />
                 <span asp-validation-for="HpAtual" class="text-danger"></span>
             </div>
             <p></p>
             <div class="form-group">
                 <label asp-for="Moeda" class="control-label"><b>Moedas</b></label>
-                <input asp-for="Moeda" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.Moeda" readonly="" />
+                <input asp-for="Moeda" class="form-control" id="readOnlyInput" type="text" placeholder="@Model.Moeda" value="" readonly="" />
                 <span asp-validation-for="Moeda" class="text-danger"></span>
             </div>
             <p></p>
