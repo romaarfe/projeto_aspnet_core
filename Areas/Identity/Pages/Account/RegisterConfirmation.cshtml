@@ -1,0 +1,36 @@
+﻿@page
+
+<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
+
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO PARA CONFIRMAÇÃO DE REGISTOS
+-->
+
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "CONFIRMAÇÃO DE REGISTO";
+}
+<br />
+<h1><b>@ViewData["Title"]</b></h1>
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+<p>
+    <b>
+        Este app não possui um serviço de envio de email configurado, mas fará parte de futuras investigações/estudos e que pode ser consultado em: <a href="https://aka.ms/aspaccountconf">Documentos Microsoft</a>.
+        Normalmente isto seria enviado por email: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Clique aqui para confirmar sua conta</a>
+    </b> 
+</p>
+    }
+    else
+    {
+<p>
+        Por favor, verifique sua conta de email.
+</p>
+    }
+}
+

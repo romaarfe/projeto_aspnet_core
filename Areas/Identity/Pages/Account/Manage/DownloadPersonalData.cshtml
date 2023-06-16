@@ -1,0 +1,22 @@
+﻿@page
+    <!--
+        PROJETO DE PROGRAMAÇÃO - 50 HORAS
+        FORMADOR: PAULO JORGE
+
+        TEMA: WEB RPG CREATION
+        FORMANDO: RODRIGO FERNANDES - Nº 13
+
+        RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO PARA DOWNLOAD DOS DADOS PESSOAIS
+        -->
+
+    @model DownloadPersonalDataModel
+    @{
+        ViewData["Title"] = "Download Your Data";
+        ViewData["ActivePage"] = ManageNavPages.PersonalData;
+    }
+
+    <h3>@ViewData["Title"]</h3>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }

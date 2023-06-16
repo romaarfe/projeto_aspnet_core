@@ -1,0 +1,36 @@
+﻿@page
+    <!--
+        PROJETO DE PROGRAMAÇÃO - 50 HORAS
+        FORMADOR: PAULO JORGE
+
+        TEMA: WEB RPG CREATION
+        FORMANDO: RODRIGO FERNANDES - Nº 13
+
+        RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO PARA DESATIVAR 2FA
+        -->
+
+    @model Disable2faModel
+    @{
+        ViewData["Title"] = "DESATIVAR AUTENTICAÇÃO POR DOIS FATORES (2FA)";
+        ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+    }
+
+    <partial name="_StatusMessage" for="StatusMessage" />
+    <p></p>
+    <h3><b>@ViewData["Title"]</b></h3>
+    <p></p>
+    <div class="alert alert-warning" role="alert">
+        <p>
+            <strong>Esta ação apenas desativa o 2FA.</strong>
+        </p>
+        <p>
+            Desativar o 2FA não altera as chaves utilizadas na aplicação de autenticação. Se você deseja alterar a chave utilizada na aplicação de autenticação, você deve <a asp-page="./ResetAuthenticator">reiniciar suas chaves de autenticação.</a>
+        </p>
+    </div>
+
+    <div>
+        <p></p>
+        <form method="post">
+            <button class="btn btn-danger" type="submit">Desative 2FA</button>
+        </form>
+    </div>

@@ -1,6 +1,17 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+﻿// PROJETO DE PROGRAMAÇÃO - 50 HORAS
+// FORMADOR: PAULO JORGE
+
+// TEMA: WEB RPG CREATION
+// FORMANDO: RODRIGO FERNANDES - Nº 13
+
+// RAZOR PAGE CRIADA AUTOMÁTICA A PARTIR DO IDENTITY
+// ATUA COMO MODELO E "CONTROLADOR" (PÁGINA) QUANDO SE TRATA DO LOGIN
+
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
+
+// ÁREA DOS USINGS/IMPORTS
 
 using System;
 using System.Collections.Generic;
@@ -15,18 +26,28 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
+// NAMESPACE DO IDENTITY ACCOUNT
+
 namespace WebRPGCreation.Areas.Identity.Pages.Account
 {
+    // HERANÇA A PARTIR DE CLASSE ABSTRATA PARA ATUAR COMO MODELO E PÁGINA
+
     public class LoginModel : PageModel
     {
+        // VARIÁVEIS DA CLASSE (API) PARA ENCAPSULAR E GERIR USERS E LOGINS
+
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+
+        // CONSTRUTOR QUE FAZ INSTANCIAÇÕES PARA FUTURO ACESSO ÀS TABELAS NA BASE DE DADOS
 
         public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;
         }
+
+        // PROPRIEDADES DA CLASSE COM DATA ANNOTATIONS
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -80,9 +101,10 @@ namespace WebRPGCreation.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
         }
+
+        // MÉTODO ASSÍNCRONO PARA PROCESSO DE LOGIN (UTILIZA COOKIES)
 
         public async Task OnGetAsync(string returnUrl = null)
         {
@@ -93,13 +115,16 @@ namespace WebRPGCreation.Areas.Identity.Pages.Account
 
             returnUrl ??= Url.Content("~/");
 
-            // Clear the existing external cookie to ensure a clean login process
+            // LIMPA OS COOKIES EXTERNOS PARA GARANTIR UM PROCESSO DE LOGIN SEGURO
+
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
             ReturnUrl = returnUrl;
         }
+
+        // MÉTODO ASSÍNCRONO PARA PROCESSO DE LOGIN (UTILIZA COOKIES)
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
@@ -109,12 +134,12 @@ namespace WebRPGCreation.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                // NÃO CONTARIA AS TENTATIVAS FALHAS DE LOGIN PARA BLOQUEAR A CONTA SE POR ACASO NÃO ESTIVESSE À TRUE
+
+                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: true);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in.");
+                    _logger.LogInformation("Utilizador logado com sucesso.");
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
@@ -123,17 +148,18 @@ namespace WebRPGCreation.Areas.Identity.Pages.Account
                 }
                 if (result.IsLockedOut)
                 {
-                    _logger.LogWarning("User account locked out.");
+                    _logger.LogWarning("Conta de utilizador bloqueada.");
                     return RedirectToPage("./Lockout");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "Tentativa de login inválida.");
                     return Page();
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+            // EM CASO DE FALHA REAPRESENTA A PÁGINA
+
             return Page();
         }
     }

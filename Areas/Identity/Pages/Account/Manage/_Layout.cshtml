@@ -1,0 +1,39 @@
+﻿<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
+
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO DO IDENTITY
+-->
+
+@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout != null)
+    {
+        Layout = parentLayout.ToString();
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
+}
+<br />
+<h1><b>CONFIGURAÇÃO</b></h1>
+
+<div>
+    <h2><b>Modifique sua conta</b></h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-3">
+            <partial name="_ManageNav" />
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

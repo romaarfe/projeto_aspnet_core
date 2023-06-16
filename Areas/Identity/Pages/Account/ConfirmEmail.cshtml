@@ -1,0 +1,18 @@
+﻿@page
+    <!--
+    PROJETO DE PROGRAMAÇÃO - 50 HORAS
+    FORMADOR: PAULO JORGE
+
+    TEMA: WEB RPG CREATION
+    FORMANDO: RODRIGO FERNANDES - Nº 13
+
+    RAZOR VIEW PARA MOSTRAR INFORMAÇÃO DE CONFIRMAÇÃO DE EMAIL
+    -->
+
+    @model ConfirmEmailModel
+    @{
+        ViewData["Title"] = "CONFIRMAÇÃO DE EMAIL";
+    }
+    <br />
+    <h1><b>@ViewData["Title"]</b></h1>
+    <partial name="_StatusMessage" model="Model.StatusMessage" />

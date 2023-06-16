@@ -1,0 +1,55 @@
+﻿@page
+    <!--
+    PROJETO DE PROGRAMAÇÃO - 50 HORAS
+    FORMADOR: PAULO JORGE
+
+    TEMA: WEB RPG CREATION
+    FORMANDO: RODRIGO FERNANDES - Nº 13
+
+    RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO PARA REALIZAÇÃO DE LOGIN COM 2FA
+    -->
+
+    @model LoginWith2faModel
+    @{
+        ViewData["Title"] = "AUTENTICAÇÃO POR DOIS FATORES";
+    }
+    <br />
+    <h1><b>@ViewData["Title"]</b></h1>
+    <hr />
+    <p></p>
+    <p><b>Seu login está protegido por uma aplicação de autenticação. Insira seu código de autenticação abaixo.</b></p>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post" asp-route-returnUrl="@Model.ReturnUrl">
+                <input asp-for="RememberMe" type="hidden" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-floating">
+                    <input asp-for="Input.TwoFactorCode" class="form-control" autocomplete="off" />
+                    <label asp-for="Input.TwoFactorCode" class="form-label"></label>
+                    <span asp-validation-for="Input.TwoFactorCode" class="text-danger"></span>
+                </div>
+                <p></p>
+                <div>
+                    <div class="form-check form-switch">
+                        <label asp-for="Input.RememberMachine" class="form-check-label"><b>Lembre-se deste dispositivo</b></label>
+                        <input asp-for="Input.RememberMachine" class="form-check-input" type="checkbox">
+                    </div>
+                </div>
+                <p></p>
+                <div>
+                    <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p></p>
+    <p>
+        <b>
+            Não tem acesso ao seu dispositivo de autenticação? Você pode
+            <a id="recovery-code-login" asp-page="./LoginWithRecoveryCode" asp-route-returnUrl="@Model.ReturnUrl">logar com um código de recuperação</a>.
+        </b>
+    </p>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }

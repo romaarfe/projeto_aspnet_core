@@ -1,0 +1,36 @@
+﻿@page
+    <!--
+        PROJETO DE PROGRAMAÇÃO - 50 HORAS
+        FORMADOR: PAULO JORGE
+
+        TEMA: WEB RPG CREATION
+        FORMANDO: RODRIGO FERNANDES - Nº 13
+
+        RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO PARA APRESENTAR CÓDIGOS DE RECUPERAÇÃO
+        -->
+
+    @model ShowRecoveryCodesModel
+    @{
+        ViewData["Title"] = "CÓDIGOS DE RECUPERAÇÃO";
+        ViewData["ActivePage"] = "TwoFactorAuthentication";
+    }
+
+    <partial name="_StatusMessage" for="StatusMessage" />
+    <h3><b>@ViewData["Title"]</b></h3>
+    <p></p>
+    <div class="alert alert-warning" role="alert">
+        <p>
+            <strong>Coloque esses códigos num local seguro.</strong>
+        </p>
+        <p>
+            Se você perder seu dispositivo e não tiver os códigos de recuperação, perderá o acesso à sua conta.
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            @for (var row = 0; row < Model.RecoveryCodes.Length; row += 2)
+            {
+                <code class="recovery-code">@Model.RecoveryCodes[row]</code><text>&nbsp;</text><code class="recovery-code">@Model.RecoveryCodes[row + 1]</code><br />
+            }
+        </div>
+    </div>

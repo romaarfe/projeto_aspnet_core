@@ -1,7 +1,20 @@
-﻿namespace WebRPGCreation.Models;
+﻿// PROJETO DE PROGRAMAÇÃO - 50 HORAS
+// FORMADOR: PAULO JORGE
 
+// TEMA: WEB RPG CREATION
+// FORMANDO: RODRIGO FERNANDES - Nº 13
+
+// CLASSE MODELO CRIADA PARA SER A BASE/RAIZ DO PROGRAMA E DA CRIAÇÃO DA BASE DE DADOS
+// FUNDAMENTAL PARA CRIAÇÃO DOS CONTROLADORES E VIEWS COM ENTITY FRAMEWORK
+
+
+// NAMESPACE DO MODELO
+namespace WebRPGCreation.Models;
+
+// CLASSE PRINCIPAL QUANDO SE TRATA DE ERROS
 public class ErrorViewModel
 {
+    // PROPRIEDADES DA CLASSE
     public string? RequestId { get; set; }
 
     public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);

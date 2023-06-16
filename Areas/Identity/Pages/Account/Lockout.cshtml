@@ -1,0 +1,26 @@
+﻿@page
+    <!--
+    PROJETO DE PROGRAMAÇÃO - 50 HORAS
+    FORMADOR: PAULO JORGE
+
+    TEMA: WEB RPG CREATION
+    FORMANDO: RODRIGO FERNANDES - Nº 13
+
+    RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO PARA CONTA BLOQUEADA
+    -->
+
+    @model LockoutModel
+    @{
+        ViewData["Title"] = "CONTA BLOQUEADA";
+    }
+    <br />
+    <header>
+        <h1 class="text-danger"><b>@ViewData["Title"]</b></h1>
+        <p class="text-danger"><b>Esta conta está bloqueada, por favor tente novamente mais tarde.</b></p>
+    </header>
+    <body>
+        <div>
+            <br />
+            <a id="voltar-login" asp-page="./Login"><b>Retornar ao Login</b></a>
+        </div>
+    </body>

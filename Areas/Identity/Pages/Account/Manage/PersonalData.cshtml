@@ -1,0 +1,35 @@
+﻿@page
+    <!--
+        PROJETO DE PROGRAMAÇÃO - 50 HORAS
+        FORMADOR: PAULO JORGE
+
+        TEMA: WEB RPG CREATION
+        FORMANDO: RODRIGO FERNANDES - Nº 13
+
+        RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO PARA GERENCIAMENTO DOS DADOS PESSOAIS
+        -->
+
+    @model PersonalDataModel
+    @{
+        ViewData["Title"] = "DADOS PESSOAIS";
+        ViewData["ActivePage"] = ManageNavPages.PersonalData;
+    }
+
+    <h3><b>@ViewData["Title"]</b></h3>
+    <p></p>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Sua conta contém dados pessoais que você nos forneceu. Esta página permite que você baixe ou exclua esses dados.</p>
+            <p>
+                <strong>Excluir esses dados removerá permanentemente sua conta e isso não poderá ser recuperado.</strong>
+            </p>
+            <form id="download-data" asp-page="DownloadPersonalData" method="post">
+                <button class="btn btn-primary" type="submit">Download</button> &nbsp;
+                <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger">Deletar</a>
+            </form>
+        </div>
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }

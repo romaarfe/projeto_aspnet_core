@@ -1,0 +1,36 @@
+﻿@page
+    <!--
+        PROJETO DE PROGRAMAÇÃO - 50 HORAS
+        FORMADOR: PAULO JORGE
+
+        TEMA: WEB RPG CREATION
+        FORMANDO: RODRIGO FERNANDES - Nº 13
+
+        RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO PARA REINICIAR AUTENTICADOR
+        -->
+
+    @model ResetAuthenticatorModel
+    @{
+        ViewData["Title"] = "REDEFINIR CHAVE DE AUTENTICAÇÃO";
+        ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+    }
+
+    <partial name="_StatusMessage" for="StatusMessage" />
+    <h3><b>@ViewData["Title"]</b></h3>
+    <p></p>
+    <div class="alert alert-warning" role="alert">
+        <p>
+            <span class="glyphicon glyphicon-warning-sign"></span>
+            <strong>Se você redefinir sua chave de autenticação, sua aplicação autenticadora não funcionará até que você a reconfigure.</strong>
+        </p>
+        <p>
+            Este processo desativa o 2FA até que você verifique sua aplicação autenticadora.
+            Se você não concluir a configuração da aplicação autenticadora, poderá perder o acesso à sua conta.
+        </p>
+    </div>
+    <p></p>
+    <div>
+        <form id="reset-authenticator-form" method="post">
+            <button id="reset-authenticator-button" class="btn btn-danger" type="submit">Redefinir chave de autenticação</button>
+        </form>
+    </div>

@@ -1,21 +1,31 @@
 ﻿@page
+<!--
+PROJETO DE PROGRAMAÇÃO - 50 HORAS
+FORMADOR: PAULO JORGE
+
+TEMA: WEB RPG CREATION
+FORMANDO: RODRIGO FERNANDES - Nº 13
+
+RAZOR VIEW PARA MOSTRAR LAYOUT BÁSICO PARA REALIZAÇÃO DE LOGOUT
+-->
+
 @model LogoutModel
 @{
-    ViewData["Title"] = "Log out";
+    ViewData["Title"] = "LOG OUT";
 }
-
+<br />
 <header>
-    <h1>@ViewData["Title"]</h1>
+    <h1><b>@ViewData["Title"]</b></h1>
     @{
         if (User.Identity?.IsAuthenticated ?? false)
         {
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                <button type="submit" class="nav-link btn btn-link text-dark">Click here to Logout</button>
+                <button type="submit" class="nav-link btn btn-link text-dark">Pressione aqui para Logout</button>
             </form>
         }
         else
         {
-            <p>You have successfully logged out of the application.</p>
+            <p><b>Você conseguiu deslogar corretamente da aplicação.</b></p>
         }
     }
 </header>

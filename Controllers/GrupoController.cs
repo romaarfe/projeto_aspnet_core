@@ -1,4 +1,15 @@
-﻿using System;
+﻿// PROJETO DE PROGRAMAÇÃO - 50 HORAS
+// FORMADOR: PAULO JORGE
+
+// TEMA: WEB RPG CREATION
+// FORMANDO: RODRIGO FERNANDES - Nº 13
+
+// CLASSE CRIADA AUTOMÁTICA A PARTIR DO ENTITY
+// ATUA COMO CONTROLADOR (PÁGINA) QUANDO SE TRATA DOS GRUPOS
+
+// ÁREA DOS USINGS/IMPORTS
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,18 +20,24 @@ using Microsoft.EntityFrameworkCore;
 using WebRPGCreation.Data;
 using WebRPGCreation.Models;
 
+// NAMESPACE DO CONTROLLER ENTITY
+
 namespace WebRPGCreation.Controllers
 {
-    [Authorize]
+    // HERANÇA A PARTIR DE CLASSE BASE PARA ATUAR COMO CONTROLADOR COM VIEW ASSOCIADA
+    [Authorize(Roles = "GM")]
     public class GrupoController : Controller
     {
+        // VARIÁVEIS DA CLASSE PARA ENCAPSULAR E GERIR INFORMAÇÕES DA BASE DE DADOS
         private readonly ApplicationDbContext _context;
 
+        // CONSTRUTOR QUE FAZ INSTANCIAÇÕES PARA FUTURO ACESSO ÀS TABELAS NA BASE DE DADOS
         public GrupoController(ApplicationDbContext context)
         {
             _context = context;
         }
 
+        // MÉTODO ASSÍNCRONO PARA APRESENTAÇÃO DA RAZOR VIEW INDEX
         // GET: Grupo
         public async Task<IActionResult> Index()
         {
@@ -29,6 +46,7 @@ namespace WebRPGCreation.Controllers
                           Problem("Entity set 'ApplicationDbContext.Grupo'  is null.");
         }
 
+        // MÉTODO ASSÍNCRONO PARA APRESENTAÇÃO DOS DETALHES DO GRUPO
         // GET: Grupo/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -47,15 +65,15 @@ namespace WebRPGCreation.Controllers
             return View(grupo);
         }
 
+        // MÉTODO ASSÍNCRONO PARA APRESENTAÇÃO DAS INFORMAÇÕES BÁSICAS REFERENTES À FUTURA CRIAÇÃO DE UM GRUPO
         // GET: Grupo/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        // MÉTODO ASSÍNCRONO PARA CRIAÇÃO DE UM GRUPO
         // POST: Grupo/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Descricao,DataInicio,DataFim")] Grupo grupo)
@@ -69,6 +87,7 @@ namespace WebRPGCreation.Controllers
             return View(grupo);
         }
 
+        // MÉTODO ASSÍNCRONO PARA APRESENTAÇÃO DAS INFORMAÇÕES BÁSICAS REFERENTES À FUTURA EDIÇÃO DE UM GRUPO
         // GET: Grupo/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -85,9 +104,8 @@ namespace WebRPGCreation.Controllers
             return View(grupo);
         }
 
+        // MÉTODO ASSÍNCRONO PARA EDIÇÃO DE UM GRUPO
         // POST: Grupo/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Descricao,DataInicio,DataFim")] Grupo grupo)
@@ -120,6 +138,7 @@ namespace WebRPGCreation.Controllers
             return View(grupo);
         }
 
+        // MÉTODO ASSÍNCRONO PARA APRESENTAÇÃO DAS INFORMAÇÕES BÁSICAS REFERENTES À FUTURA REMOÇÃO DE UM GRUPO
         // GET: Grupo/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -138,6 +157,7 @@ namespace WebRPGCreation.Controllers
             return View(grupo);
         }
 
+        // MÉTODO ASSÍNCRONO PARA CONFIRMAR REMOÇÃO DE UM GRUPO
         // POST: Grupo/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -157,6 +177,7 @@ namespace WebRPGCreation.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // MÉTODO PARA VERIFICAR SE O TAL GRUPO JÁ EXISTE
         private bool GrupoExists(int id)
         {
           return (_context.Grupo?.Any(e => e.Id == id)).GetValueOrDefault();

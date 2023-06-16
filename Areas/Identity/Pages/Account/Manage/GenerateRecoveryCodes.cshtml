@@ -1,0 +1,38 @@
+﻿@page
+    <!--
+        PROJETO DE PROGRAMAÇÃO - 50 HORAS
+        FORMADOR: PAULO JORGE
+
+        TEMA: WEB RPG CREATION
+        FORMANDO: RODRIGO FERNANDES - Nº 13
+
+        RAZOR VIEW PARA MOSTRAR LAYOUT DOS CÓDIGOS DE RECUPERAÇÃO (2FA)
+        -->
+
+    @model GenerateRecoveryCodesModel
+    @{
+        ViewData["Title"] = "GERE CÓDIGOS DE RECUPERAÇÃO DE AUTENTICAÇÃO POR DOIS FATORES (2FA)";
+        ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+    }
+
+    <partial name="_StatusMessage" for="StatusMessage" />
+    <h3><b>@ViewData["Title"]</b></h3>
+    <div class="alert alert-warning" role="alert">
+        <p>
+            <span class="glyphicon glyphicon-warning-sign"></span>
+            <strong>Coloque esses códigos num local seguro.</strong>
+        </p>
+        <p>
+            Se você perder seu dispositivo e não tiver os códigos de recuperação, perderá o acesso à sua conta.
+        </p>
+        <p>
+            A geração de novos códigos de recuperação não altera as chaves usadas nas aplicações autenticadoras. Se você deseja alterar a chave
+            usada num aplicativo autenticador, você deve <a asp-page="./ResetAuthenticator">redefinir suas chaves de autenticação.</a>
+        </p>
+    </div>
+    <p></p>
+    <div>
+        <form method="post">
+            <button class="btn btn-danger" type="submit">Gerar códigos de recuperação</button>
+        </form>
+    </div>
