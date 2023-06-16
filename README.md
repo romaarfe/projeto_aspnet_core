@@ -52,6 +52,30 @@
   * Recriação do projeto “do zero” para inclusão do sistema de Login automático pelo modo Identity
   * Remodelações das Views e nos Controllers
 
+* Modificações em 2023-05-21:
+  * Verificação do Personagem Controller com a View
+  * Tratar dos envios de informações no método Create()
+  * Modificar argumentos do Create(POST)
+  * Criar variáveis de Classe
+
+* Modificações em 2023-05-27:
+  * Desisti de múltiplos métodos Random
+  * Testei as variáveis de Classe como Static
+  * Testei métodos com retorno
+  * Objetivo era evitar modificação dos Value através do INspect via HTML e ao fazer Submit
+  * Resolvi da maneira mais simples, porém funcional
+
+* Modificações em 2023-06-03 e 04:
+  * Modificação do Program.cs para ser Main e facilitar a criação das Roles e contas de Utilizadores
+  * Configuração do Program e criação na Base de Dados
+  * Alteração do Login, Access Denied, Register... para funcionar direto na página
+  * Todo novo Registo é automaticamente um Role "Jogador"
+
+* Modificações em 2023-06-10 e 11:
+  * Inclusão de tudo relacionado ao Identity
+  * Ficaram por configurar Logins Externos e Servidor de envio de Emails
+  * A base para tudo isso já funciona, falta apenas a implementação
+
 ### Análise de dados
 ![Imagem1](https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/6238b49f-0066-47a3-ad60-004cba1c90a6)
 ![Imagem2](https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/040385c4-7ceb-49bb-86c2-1999850aadc9)
