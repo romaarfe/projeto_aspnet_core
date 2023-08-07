@@ -17,21 +17,21 @@
 
 ### Lista de tarefas a serem implementadas 
 
-* Inicialmente criar o projeto com Identity e configurá-lo para aceitar Login por parte do Game Master e limitar acesso às funções por parte dos Jogadores. 
+- [x] Inicialmente criar o projeto com Identity e configurá-lo para aceitar Login por parte do Game Master e limitar acesso às funções por parte dos Jogadores. 
 
-* Criar os Modelos e suas relações para criação da base de dados e também a criação automática, via Entity Framework, dos Controllers e Views. 
+- [x] Criar os Modelos e suas relações para criação da base de dados e também a criação automática, via Entity Framework, dos Controllers e Views. 
 
-* Realizar CRUD de todas informações relacionadas aos Modelos. 
+- [x] Realizar CRUD de todas informações relacionadas aos Modelos. 
 
-* Com base nessas informações e com a criação de um Grupo, apresentar os membros desse grupo, através de listas, na página principal Home.  
+- [x] Com base nessas informações e com a criação de um Grupo, apresentar os membros desse grupo, através de listas, na página principal Home.  
 
-* Criar métodos que geram valores aleatórios, com base na regra do jogo, para os atributos do Personagem quando tentam criar um personagem. 
+- [x] Criar métodos que geram valores aleatórios, com base na regra do jogo, para os atributos do Personagem quando tentam criar um personagem. 
 
-* Limitar estes campos para apenas leitura. 
+- [x] Limitar estes campos para apenas leitura. 
 
-* Limitar a quantidade de Equipamentos associados aos personagens com base no valor final do atributo poder. 
+- [x] Limitar a quantidade de Equipamentos associados aos personagens com base no valor final do atributo poder. 
 
-* Qualquer um não logado (Jogador) pode visualizar Home, Personagens, Criar Novos Personagens, e ver Detalhes dos Personagens. 
+- [x] Qualquer um não logado (Jogador) pode visualizar Home, Personagens, Criar Novos Personagens, e ver Detalhes dos Personagens. 
 
 ### Ferramentas e versões
 
