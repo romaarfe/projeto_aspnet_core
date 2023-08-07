@@ -38,43 +38,43 @@
 *	Início do planeamento em 2023-04-30
 
 * Reformulação do Diagrama de Entidades em 2023-05-05:
-  * Exclusão do Artefato, Bugiganga e PacoteInicial
-  * Os três acima foram diferenciados em Tipos dentro do Equipamento
-  * Retirada de alguns preenchimentos obrigatório
-  * Reestruturação dos Modelos
+  - [x] Exclusão do Artefato, Bugiganga e PacoteInicial
+  - [x] Os três acima foram diferenciados em Tipos dentro do Equipamento
+  - [x] Retirada de alguns preenchimentos obrigatório
+  - [x] Reestruturação dos Modelos
  
 * Modificações em 2023-05-06:
-  * Alterado alguns tipos para poder incluir mais informações pertinentes
-  * Alteração considerável no Equipamento
-  * Primeira tentativa, de muitas, frustrada de incluir sistema de Login no projeto já iniciado
+  - [x] Alterado alguns tipos para poder incluir mais informações pertinentes
+  - [x] Alteração considerável no Equipamento
+  - [x] Primeira tentativa, de muitas, frustrada de incluir sistema de Login no projeto já iniciado
 
 * Modificações em 2023-05-13:
-  * Recriação do projeto “do zero” para inclusão do sistema de Login automático pelo modo Identity
-  * Remodelações das Views e nos Controllers
+  - [x] Recriação do projeto “do zero” para inclusão do sistema de Login automático pelo modo Identity
+  - [x] Remodelações das Views e nos Controllers
 
 * Modificações em 2023-05-21:
-  * Verificação do Personagem Controller com a View
-  * Tratar dos envios de informações no método Create()
-  * Modificar argumentos do Create(POST)
-  * Criar variáveis de Classe
+  - [x] Verificação do Personagem Controller com a View
+  - [x] Tratar dos envios de informações no método Create()
+  - [x] Modificar argumentos do Create(POST)
+  - [x] Criar variáveis de Classe
 
 * Modificações em 2023-05-27:
-  * Desisti de múltiplos métodos Random
-  * Testei as variáveis de Classe como Static
-  * Testei métodos com retorno
-  * Objetivo era evitar modificação dos Value através do Inspect via HTML e ao fazer Submit
-  * Resolvi da maneira mais simples, porém funcional
+  - [x] Desisti de múltiplos métodos Random
+  - [x] Testei as variáveis de Classe como Static
+  - [x] Testei métodos com retorno
+  - [x] Objetivo era evitar modificação dos Value através do Inspect via HTML e ao fazer Submit
+  - [x] Resolvi da maneira mais simples, porém funcional
 
 * Modificações em 2023-06-03 e 04:
-  * Modificação do Program.cs para ser Main e facilitar a criação das Roles e contas de Utilizadores
-  * Configuração do Program e criação na Base de Dados
-  * Alteração do Login, Access Denied, Register... para funcionar direto na página
-  * Todo novo Registo é automaticamente um Role "Jogador"
+  - [x] Modificação do Program.cs para ser Main e facilitar a criação das Roles e contas de Utilizadores
+  - [x] Configuração do Program e criação na Base de Dados
+  - [x] Alteração do Login, Access Denied, Register... para funcionar direto na página
+  - [x] Todo novo Registo é automaticamente um Role "Jogador"
 
 * Modificações em 2023-06-10 e 11:
-  * Inclusão de tudo relacionado ao Identity
-  * Ficaram por configurar Logins Externos e Servidor de envio de Emails
-  * A base para tudo isso já funciona, falta apenas a implementação
+  - [x] Inclusão de tudo relacionado ao Identity
+  - [x] Ficaram por configurar Logins Externos e Servidor de envio de Emails
+  - [x] A base para tudo isso já funciona, falta apenas a implementação
 
 ### Análise de dados
 ![Imagem1](https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/6238b49f-0066-47a3-ad60-004cba1c90a6)
