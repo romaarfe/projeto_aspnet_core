@@ -193,6 +193,7 @@
 <br>
 <br>
 
+* **Controllers**
   * ***GrupoController***
     * Index( )
     * Details( )
@@ -208,6 +209,7 @@
 <br>
 <br>
 
+* **Controllers**
   * ***PersonagemController***
     * Index( )
     * Details( )
@@ -223,6 +225,7 @@
 <br>
 <br>
 
+* **Controllers**
   * ***PoderProfanoController***
     * Index( )
     * Details( )
@@ -237,7 +240,8 @@
 <img width="1399" alt="Captura de ecrã 2023-05-31, às 09 32 27" src="https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/0aa4ca8c-4f7e-4ea1-a3a1-20dd8283fbe5">
 <br>
 <br>
- 
+
+ * **Controllers**
   * ***HomeController***
     * Index( )
     * Error( )
