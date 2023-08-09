@@ -83,14 +83,14 @@
 
 ---
 ### 📊 TABELAS / CAMPOS / TIPOS
-* Grupo:
+* **Grupo**:
   * Id - INT, NN, PK, AI
   * Nome - NVARCHAR(MAX)
   * Descricao - NVARCHAR(MAX)
   * DataFim - DATETIME2(7)
   * DataInicio - DATETIME2(7)
 
-* Personagem:
+* **Personagem**:
   * Id - INT, NN, PK, AI
   * Nome - NVARCHAR(MAX)
   * Descricao - NVARCHAR(MAX)
@@ -107,13 +107,13 @@
   * GrupoId - INT, NN, FK
   * Moeda - NVARCHAR(MAX)
 
-* Especialidade:
+* **Especialidade**:
   * Id - INT, NN, PK, AI
   * Nome - NVARCHAR(MAX)
   * Descricao - NVARCHAR(MAX)
   * PersonagemId - INT, NN, FK
 
-* Equipamento:
+* **Equipamento**:
   * Id - INT, NN, PK, AI
   * Nome - NVARCHAR(MAX)
   * Quantidade - NVARCHAR(MAX)
@@ -124,12 +124,13 @@
   * PoderProfanoId - INT, NN, FK
   * PersonagemId - INT, NN, FK
 
-* PoderProfano:
+* **PoderProfano**:
   * Id - INT, NN, PK, AI
   * Nome - NVARCHAR(MAX)
   * Descricao - NVARCHAR(MAX)
 
-### Namespaces
+---
+### 🗃 NAMESPACES
 * WebRPGCreation.Controllers
 *	WebRPGCreation.Data
 *	WebRPGCreation.Models
