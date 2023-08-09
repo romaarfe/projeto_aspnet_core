@@ -1,9 +1,7 @@
-# PROJETO DE 50 HORAS EM ASP.NET CORE
-## PARA CURSO DE PROGRAMADOR DE INFORMÁTICA - IEFP BRAGA
+### 🚧 WEB RPG CREATION 🚧
 
-## Web RPG Creation
-
-### Descrição do problema 
+---
+### 🎮 DESCRIÇÃO DO PROBLEMA 
 
 * Registo de grupos de e gestão dos personagens, com todos seus equipamentos e especialidades. Para uso limitado dos Jogadores e para total controle do Game Master em suas partidas de Roleplaying Game. 
 
@@ -15,7 +13,8 @@
 
 * Há conexão com a Base de dados, onde ficam registadas estas informações. 
 
-### Lista de tarefas a serem implementadas 
+---
+### 👾 TAREFAS IMPLEMENTADAS
 
 - [x] Inicialmente criar o projeto com Identity e configurá-lo para aceitar Login por parte do Game Master e limitar acesso às funções por parte dos Jogadores. 
 
@@ -33,55 +32,56 @@
 
 - [x] Qualquer um não logado (Jogador) pode visualizar Home, Personagens, Criar Novos Personagens, e ver Detalhes dos Personagens. 
 
-### Ferramentas e versões
+---
+### 🤖 FERRAMENTAS / VERSÕES
 
-*	Início do planeamento em 2023-04-30
+*	**Início do planeamento em 2023-04-30**
 
-* Reformulação do Diagrama de Entidades em 2023-05-05:
+* **Reformulação do Diagrama de Entidades em 2023-05-05:**
   - [x] Exclusão do Artefato, Bugiganga e PacoteInicial
   - [x] Os três acima foram diferenciados em Tipos dentro do Equipamento
   - [x] Retirada de alguns preenchimentos obrigatório
   - [x] Reestruturação dos Modelos
  
-* Modificações em 2023-05-06:
+* **Modificações em 2023-05-06:**
   - [x] Alterado alguns tipos para poder incluir mais informações pertinentes
   - [x] Alteração considerável no Equipamento
   - [x] Primeira tentativa, de muitas, frustrada de incluir sistema de Login no projeto já iniciado
 
-* Modificações em 2023-05-13:
+* **Modificações em 2023-05-13:**
   - [x] Recriação do projeto “do zero” para inclusão do sistema de Login automático pelo modo Identity
   - [x] Remodelações das Views e nos Controllers
 
-* Modificações em 2023-05-21:
+* **Modificações em 2023-05-21:**
   - [x] Verificação do Personagem Controller com a View
   - [x] Tratar dos envios de informações no método Create()
   - [x] Modificar argumentos do Create(POST)
   - [x] Criar variáveis de Classe
 
-* Modificações em 2023-05-27:
+* **Modificações em 2023-05-27:**
   - [x] Desisti de múltiplos métodos Random
   - [x] Testei as variáveis de Classe como Static
   - [x] Testei métodos com retorno
   - [x] Objetivo era evitar modificação dos Value através do Inspect via HTML e ao fazer Submit
   - [x] Resolvi da maneira mais simples, porém funcional
 
-* Modificações em 2023-06-03 e 04:
+* **Modificações em 2023-06-03 e 04:**
   - [x] Modificação do Program.cs para ser Main e facilitar a criação das Roles e contas de Utilizadores
   - [x] Configuração do Program e criação na Base de Dados
   - [x] Alteração do Login, Access Denied, Register... para funcionar direto na página
   - [x] Todo novo Registo é automaticamente um Role "Jogador"
 
-* Modificações em 2023-06-10 e 11:
+* **Modificações em 2023-06-10 e 11:**
   - [x] Inclusão de tudo relacionado ao Identity
   - [x] Ficaram por configurar Logins Externos e Servidor de envio de Emails
   - [x] A base para tudo isso já funciona, falta apenas a implementação
 
-### Análise de dados
+### 📈 ANÁLISE DE DADOS
 ![Imagem1](https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/6238b49f-0066-47a3-ad60-004cba1c90a6)
 ![Imagem2](https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/040385c4-7ceb-49bb-86c2-1999850aadc9)
 
-
-### Lista de tabelas, campos e tipos
+---
+### 📊 TABELAS / CAMPOS / TIPOS
 * Grupo:
   * Id - INT, NN, PK, AI
   * Nome - NVARCHAR(MAX)
@@ -248,4 +248,5 @@
 
 https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/7a53b8ec-aa88-4ec5-ba53-6c001ee88748
 
-
+# PROJETO DE 50 HORAS EM ASP.NET CORE
+## PARA CURSO DE PROGRAMADOR DE INFORMÁTICA - IEFP BRAGA
