@@ -136,23 +136,24 @@
 
 ---
 ### 🗃 NAMESPACES
-* WebRPGCreation.Controllers
-*	WebRPGCreation.Data
-*	WebRPGCreation.Models
-*	WebRPGCreation.Migrations
+* **WebRPGCreation.Controllers**
+*	**WebRPGCreation.Data**
+*	**WebRPGCreation.Models**
+*	**WebRPGCreation.Migrations**
 
-### Classes e métodos
-* WebRPGCreation
+---
+### 📇 CLASSES / MÉTODOS
+* **WebRPGCreation**
   * Program
 
 <br>
 <img width="538" alt="Captura de ecrã 2023-05-31, às 09 31 20" src="https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/fcb2fcf9-7d77-476c-961a-b3526b0f0fe4">
 <br>
 
-* Data
+* **Data**
   *	ApplicationDbContext
   
-* Models
+* **Models**
   *	Equipamento
   *	Especialidade
   *	Grupo
@@ -160,8 +161,8 @@
   *	PoderProfano
   *	ErrorViewModel
   
-* Controllers
-  *	EquipamentoController
+* **Controllers**
+  *	*EquipamentoController*
     *	Index( )
     * Details( )
     * Create( )
@@ -176,7 +177,7 @@
 <br>
 <br>
 
-  * EspecialidadeController
+  * *EspecialidadeController*
     * Index( )
     * Details( )
     * Create( )
@@ -191,7 +192,7 @@
 <br>
 <br>
 
-  * GrupoController
+  * *GrupoController*
     * Index( )
     * Details( )
     * Create( )
@@ -206,7 +207,7 @@
 <br>
 <br>
 
-  * PersonagemController
+  * *PersonagemController*
     * Index( )
     * Details( )
     * Create( )
@@ -221,7 +222,7 @@
 <br>
 <br>
 
-  * PoderProfanoController
+  * *PoderProfanoController*
     * Index( )
     * Details( )
     * Create( )
@@ -236,7 +237,7 @@
 <br>
 <br>
  
-  * HomeController
+  * *HomeController*
     * Index( )
     * Error( )
 
@@ -246,14 +247,16 @@
 <br>
 <br>
 
-### Outras informações
-* Material Extra (wwwroot):
+---
+### 📝 OUTRAS INFORMAÇÕES
+* **Material Extra** *(wwwroot)*:
   *	Sketchy Theme (Bootstrap)
   *	Image
 
-
-
+---
+### 🎥 APRESENTAÇÃO
 https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/7a53b8ec-aa88-4ec5-ba53-6c001ee88748
 
-# PROJETO DE 50 HORAS EM ASP.NET CORE
-## PARA CURSO DE PROGRAMADOR DE INFORMÁTICA - IEFP BRAGA
+---
+#### 👨‍💻 PROJETO DE 50 HORAS EM ASP.NET CORE
+##### 📖 PARA CURSO DE PROGRAMADOR DE INFORMÁTICA - IEFP BRAGA
