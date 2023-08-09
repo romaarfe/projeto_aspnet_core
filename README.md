@@ -78,7 +78,10 @@
 
 ---
 ### 📈 ANÁLISE DE DADOS
+* **Entity**
 ![Imagem1](https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/6238b49f-0066-47a3-ad60-004cba1c90a6)
+
+* **Identity**
 ![Imagem2](https://github.com/romaarfe/projeto_aspnet_core/assets/91450312/040385c4-7ceb-49bb-86c2-1999850aadc9)
 
 ---
