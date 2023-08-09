@@ -162,7 +162,7 @@
   *	ErrorViewModel
   
 * **Controllers**
-  *	*EquipamentoController*
+  *	***EquipamentoController***
     *	Index( )
     * Details( )
     * Create( )
@@ -177,7 +177,7 @@
 <br>
 <br>
 
-  * *EspecialidadeController*
+  * ***EspecialidadeController***
     * Index( )
     * Details( )
     * Create( )
@@ -192,7 +192,7 @@
 <br>
 <br>
 
-  * *GrupoController*
+  * ***GrupoController***
     * Index( )
     * Details( )
     * Create( )
@@ -207,7 +207,7 @@
 <br>
 <br>
 
-  * *PersonagemController*
+  * ***PersonagemController***
     * Index( )
     * Details( )
     * Create( )
@@ -222,7 +222,7 @@
 <br>
 <br>
 
-  * *PoderProfanoController*
+  * ***PoderProfanoController***
     * Index( )
     * Details( )
     * Create( )
@@ -237,7 +237,7 @@
 <br>
 <br>
  
-  * *HomeController*
+  * ***HomeController***
     * Index( )
     * Error( )
 
